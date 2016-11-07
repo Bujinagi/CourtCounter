@@ -8,16 +8,16 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#7b7e84"
-        android:textColor="#ba1a1a"
+        android:layout_height="60dp"
+        android:background="#0E2C37"
+        android:textColor="#00B2E2"
         android:gravity="center"
-        android:text="Team Valor"
+        android:text="Counter Logic Gaming"
         android:textAppearance="?android:textAppearanceLarge"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="195dp"
+        android:layout_height="60dp"
         android:background="#000000"
         android:gravity="center"
         android:textColor="#f0f731"
@@ -25,11 +25,19 @@
         android:textAppearance="?android:textAppearanceLarge"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_width="195dp"
+        android:layout_height="60dp"
         android:background="#a5bde2"
         android:gravity="center"
-        android:text="0"
+        android:id="@+id/count"
         android:textStyle="bold"
         android:textAppearance="?android:textAppearanceLarge"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="1 Point"
+        android:onClick="clickFunction1"/>
+
 </LinearLayout>
