@@ -40,11 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickFunction3(View view){
-        counts.setText("0");
-        counts2.setText("0");
-        this.a = 0;
-        this.b = 0;
-        gameOverAlert.setTitle("Alert Title");
+
+        gameOverAlert.setTitle("Alert Text");
         gameOverAlert.setMessage("Message Text");
 
         gameOverAlert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
@@ -56,16 +53,25 @@ public class MainActivity extends AppCompatActivity {
         gameOverAlert.show();
 
         if(a > b) {
+            gameOverAlert.setTitle("CLG! CLG!");
             gameOverAlert.setMessage("Counter Logic Gaming wins!");
         }
 
         if(b > a) {
+            gameOverAlert.setTitle("TSM! TSM!");
             gameOverAlert.setMessage("Team SoloMid wins!");
         }
 
         if(a == b) {
+            gameOverAlert.setTitle("?!");
             gameOverAlert.setMessage("Draw! Neither team wins!");
         }
+
+
+        counts.setText("0");
+        counts2.setText("0");
+        this.a = 0;
+        this.b = 0;
     }
 
 }
