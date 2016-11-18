@@ -36,15 +36,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickFunction1(View view){
         sound2.start();
-        counts.setText(String.valueOf(a));
         a++;
+        counts.setText(String.valueOf(a));
         counts.setText(""+a);
     }
 
     public void clickFunction2(View view){
         sound3.start();
-        counts2.setText(String.valueOf(b));
         b++;
+        counts2.setText(String.valueOf(b));
+        counts2.setText(""+b);
+    }
+
+    public void clickFunction4(View view){
+        sound2.start();
+        a--;
+        counts.setText(String.valueOf(a));
+        counts.setText(""+a);
+    }
+
+    public void clickFunction5(View view){
+        sound3.start();
+        b--;
+        counts2.setText(String.valueOf(b));
         counts2.setText(""+b);
     }
 

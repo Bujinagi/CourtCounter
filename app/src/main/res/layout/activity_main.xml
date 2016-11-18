@@ -29,7 +29,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="90dp"
                 android:background="#003366"
                 android:gravity="center"
                 android:textColor="#009999"
@@ -39,7 +39,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="90dp"
                 android:background="#A6A6E4"
                 android:gravity="center"
                 android:id="@+id/count"
@@ -58,6 +58,13 @@
             android:text="+1"
             android:onClick="clickFunction1"/>
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="-1"
+            android:onClick="clickFunction4"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -75,7 +82,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="90dp"
                 android:background="#9C9C9D"
                 android:gravity="center"
                 android:textColor="#DDDEDE"
@@ -85,7 +92,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="90dp"
                 android:background="#F2F3F3"
                 android:gravity="center"
                 android:id="@+id/count2"
@@ -100,10 +107,17 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
             android:text="+1"
             android:layout_marginTop="0dp"
             android:onClick="clickFunction2"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="-1"
+            android:onClick="clickFunction5"/>
 
         <Button
             android:id="@+id/button3"
@@ -112,7 +126,7 @@
             android:text="Frick Trump"
             android:background="#000000"
             android:textColor="#ffffff"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="50dp"
             android:onClick="clickFunction3"/>
 
     </LinearLayout>
