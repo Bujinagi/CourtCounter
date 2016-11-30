@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer sound1;
     private MediaPlayer sound2;
     private MediaPlayer sound3;
+    private EditText team1name;
+    private EditText team2name;
     AlertDialog gameOverAlert;
 
     @Override
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         counts.setText(String.valueOf(a));
         counts2 = (TextView)findViewById(R.id.count2);
         counts2.setText(String.valueOf(b));
+        team1name = (EditText)findViewById(R.id.team1);
+        team2name = (EditText)findViewById(R.id.team2);
         gameOverAlert= new AlertDialog.Builder(MainActivity.this).create();
         sound1 = MediaPlayer.create(this , R.raw.airhorn);
         sound2 = MediaPlayer.create(this , R.raw.hitmarker);
@@ -78,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
         gameOverAlert.show();
 
         if(a > b) {
-            gameOverAlert.setTitle("CLG! CLG!");
-            gameOverAlert.setMessage("Counter Logic Gaming wins!");
+            gameOverAlert.setTitle("Game Over!");
+            gameOverAlert.setMessage(team1name + " wins!");
         }
 
         if(b > a) {
-            gameOverAlert.setTitle("TSM! TSM!");
-            gameOverAlert.setMessage("Team SoloMid wins!");
+            gameOverAlert.setTitle("Game Over!!");
+            gameOverAlert.setMessage(team2name + " wins!");
         }
 
         if(a == b) {
