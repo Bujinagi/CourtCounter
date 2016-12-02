@@ -2,7 +2,7 @@ package br.courtcounter;
 
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
-import android.support.v7.app.AlertDialog;
+import android.support.v7   .app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer sound3;
     private EditText team1name;
     private EditText team2name;
+    public String team1Name;
+    public String team2Name;
     AlertDialog gameOverAlert;
 
     @Override
@@ -84,19 +86,20 @@ public class MainActivity extends AppCompatActivity {
 
         if(a > b) {
             gameOverAlert.setTitle("Game Over!");
-            gameOverAlert.setMessage(team1name + " wins!");
+            team1Name = team1name.getText().toString();
+            gameOverAlert.setMessage(team1Name + " Wins!");
         }
 
         if(b > a) {
             gameOverAlert.setTitle("Game Over!!");
-            gameOverAlert.setMessage(team2name + " wins!");
+            team2Name = team2name.getText().toString();
+            gameOverAlert.setMessage(team2Name + " Wins!");
         }
 
         if(a == b) {
             gameOverAlert.setTitle("?!");
             gameOverAlert.setMessage("Draw! Neither team wins!");
         }
-
 
         counts.setText("0");
         counts2.setText("0");
